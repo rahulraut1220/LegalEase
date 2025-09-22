@@ -3,6 +3,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const Appointment = require("../models/Appointment");
 const User = require("../models/User");
 
+// creating new appointment
 exports.createAppointment = async (req, res) => {
   try {
     const { lawyerId, caseId, appointmentTime, notes } = req.body;

@@ -4,7 +4,7 @@ const User = require("../models/User");
 const protect = async (req, res, next) => {
   console.log("Auth Middleware - Checking authorization");
   
-  let token;
+  let token; 
 
   // Get token from header
   if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
